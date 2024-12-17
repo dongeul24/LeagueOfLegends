@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Spiegel 폰트 설정 */
+@font-face {
+  font-family: "Spiegel";
+  src: url("/fonts/regular.woff2") format("woff2");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spiegel";
+  src: url("/fonts/light.woff2") format("woff2");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spiegel";
+  src: url("/fonts/semiLight.woff2") format("woff2");
+  font-weight: 350; /* Semi-Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spiegel";
+  src: url("/fonts/semiBold.woff2") format("woff2");
+  font-weight: 600; /* Semi-Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spiegel";
+  src: url("/fonts/bold.woff2") format("woff2");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spiegel";
+  src: url("/fonts/extraBold.woff2") format("woff2");
+  font-weight: 800; /* Extra-Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spiegel";
+  src: url("/fonts/extraLight.woff2") format("woff2");
+  font-weight: 200; /* Extra-Light */
+  font-style: normal;
+}
+
+/* 기본 body 폰트 설정 */
+body {
+  @apply bg-gray-100 text-gray-900;
+  font-family: "Spiegel", sans-serif;
+}
