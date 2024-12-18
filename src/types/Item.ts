@@ -6,7 +6,7 @@ export interface Items{
 }
 
 
- interface Item {
+export interface Item {
   name: string;
   description: string;
   colloq: string;
