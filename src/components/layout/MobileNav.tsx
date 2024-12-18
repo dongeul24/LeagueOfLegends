@@ -65,7 +65,7 @@ const MobileNav = () => {
 
       {/* useState로 드롭다운 열린지 안 열린지 상태 확인해서 드롭다운 메뉴 보여줌  */}
       {isOpen && (
-        <ul className="absolute top-16 left-0 w-full bg-gradient-to-b text-white from-cyan-950 to-cyan-800 dark:from-gray-900 dark:to-gray-800 text-white flex flex-col items-center space-y-4 py-4 shadow-lg lg:hidden">
+        <ul className="absolute top-16 left-0 w-full bg-gradient-to-b from-cyan-950 to-cyan-800 dark:from-gray-900 dark:to-gray-800 text-white flex flex-col items-center space-y-4 py-4 shadow-lg lg:hidden">
           <li>
             <Link
               href="/"

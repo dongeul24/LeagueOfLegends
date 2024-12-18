@@ -1,5 +1,5 @@
 import { fetchItemList, getLatestVersion } from "@/utils/serverApi";
-import ItemCard from "@/components/ItemCard";
+import ItemCard from "@/components/cards/ItemCard";
 import { Items, Item } from "@/types/Item";
 import { Metadata } from "next";
 

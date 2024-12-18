@@ -2,8 +2,9 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { getChampionRotation } from "@/utils/riotApi";
-import ChampionCard from "@/components/ChampionCard";
+import ChampionCard from "@/components/cards/ChampionCard";
 import { Champions, Champion } from "@/types/Champion";
+import LoadingSpinner from '@/components/status/LoadingSpinner';
 
 export default function RotationPage() {
   const {
@@ -19,7 +20,7 @@ export default function RotationPage() {
   });
 
   if (isRotationPending) {
-    return <p className="text-center">로딩 중...</p>;
+    return <LoadingSpinner></LoadingSpinner>;
   }
 
   if (isRotationError) {
