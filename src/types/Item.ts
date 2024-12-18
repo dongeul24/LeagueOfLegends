@@ -1,4 +1,25 @@
-import {Image} from "./Champion"
+import { Image } from "./Champion"
+
+// .data
+export interface Items{
+  [itemId: string]: Item;
+}
+
+
+ interface Item {
+  name: string;
+  description: string;
+  colloq: string;
+  plaintext: string;
+  into: string[];
+  image: Image;
+  gold: Gold;
+  tags: string[];
+  maps: Maps;
+  stats: Stats;
+}
+
+
 
 interface Gold {
   base: number;
@@ -19,20 +40,3 @@ type Maps = {
   "30": boolean;
   "33": boolean;
 };
-
-
-// .data.아이디(숫자)
-export interface Item {
-  name: string;
-  description: string;
-  colloq: string;
-  plaintext: string;
-  into: string[];
-  image: Image;
-  gold: Gold;
-  tags: string[];
-  maps: Maps;
-  stats: Stats;
-}
-
-

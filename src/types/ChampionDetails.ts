@@ -1,6 +1,11 @@
 import { Champion, Image } from "./Champion";
 
-// data.챔피언이름
+// .data
+export interface ChampionDetails {
+  [championName: string]: ChampionDetail;
+};
+
+
 export interface ChampionDetail extends Omit<Champion, "version"> {
   skins: Skins[];
   lore: string;

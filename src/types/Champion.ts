@@ -1,5 +1,7 @@
-
-//.data.챔피언이름
+//.data
+export interface Champions {
+  [championName: string]: Champion;
+}
 export interface Champion {
   version: string;
   id: string;
@@ -30,7 +32,6 @@ export interface Image {
   w: number;
   h: number;
 }
-
 
 interface Stats {
   hp: number;
