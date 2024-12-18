@@ -14,9 +14,9 @@ export default function Home() {
       </div>
 
       {/* 메인 콘텐츠 섹션 */}
-      <div className="mt-[40px] flex flex-col justify-center gap-10 w-1/3 pb-10">
+      <div className="mt-[40px] flex flex-col justify-center gap-10 w-1/2 pb-10">
         {/* 챔피언 목록 */}
-        <div className="relative h-[300px] rounded-xl overflow-hidden group">
+        <div className="relative h-[500px] rounded-xl overflow-hidden group">
           <div className="absolute inset-0 bg-[url('/images/home-image1.webp')] bg-cover bg-center transition-transform duration-300 group-hover:scale-105"></div>
           <Link
             href={"/champions"}
@@ -29,7 +29,7 @@ export default function Home() {
         </div>
 
         {/* 금주 로테이션 */}
-        <div className="relative h-[300px] rounded-xl overflow-hidden group">
+        <div className="relative h-[500px] rounded-xl overflow-hidden group">
           <div className="absolute inset-0 bg-[url('/images/home-image2.webp')] bg-cover bg-center transition-transform duration-300 group-hover:scale-105"></div>
           <Link
             href={"/rotation"}
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
 
         {/* 아이템 목록 */}
-        <div className="relative h-[300px] rounded-xl overflow-hidden group">
+        <div className="relative h-[500px] rounded-xl overflow-hidden group">
           <div className="absolute inset-0 bg-[url('/images/home-image3.webp')] bg-cover bg-center transition-transform duration-300 group-hover:scale-105"></div>
           <Link
             href={"/items"}
