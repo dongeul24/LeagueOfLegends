@@ -15,10 +15,11 @@ export default function RotationPage() {
     queryFn: getChampionRotation,
     staleTime: 10 * 60 * 1000, // 10분
     gcTime: 10 * 60 * 1000, // 10분 // cache time
+    retry: 2, // 요청 실패 시 최대 두 번 재시도
   });
 
   if (isRotationPending) {
-    return <p className="text-center text-white">로딩 중...</p>;
+    return <p className="text-center">로딩 중...</p>;
   }
 
   if (isRotationError) {
@@ -31,7 +32,7 @@ export default function RotationPage() {
 
   return (
     <main className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-6 text-white">
+      <h1 className="text-3xl font-bold text-center mb-14">
         금주의 로테이션 챔피언
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

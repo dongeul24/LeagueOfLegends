@@ -12,7 +12,7 @@ type ChampionCardProps = {
 const ChampionCard = ({ id, name, title, imageSrc }: ChampionCardProps) => {
   return (
     <Link href={`/champions/${id}`}>
-      <div className="bg-gray-800 border-white border-2 text-white rounded-lg overflow-hidden transition-transform transform hover:scale-105 group">
+      <div className="bg-cyan-900 dark:bg-gray-800 border-black dark:border-white border-2 text-white rounded-lg overflow-hidden transition-transform transform hover:scale-105 group">
         <div className="relative w-full h-[200px] bg-black">
           <Image
             src={imageSrc}

@@ -13,7 +13,7 @@ const removeHtmlTags = (input: string): string => {
 
 export default function ItemCard({ item, version }: ItemCardProps) {
   return (
-    <div className="bg-gray-800 text-white rounded-lg shadow-md overflow-hidden p-4">
+    <div className="bg-cyan-900 dark:bg-gray-800 border-black dark:border-white text-white rounded-lg shadow-md overflow-hidden p-4">
       <div className="relative w-full aspect-square">
         <Image
           src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item.image.full}`}
@@ -24,7 +24,9 @@ export default function ItemCard({ item, version }: ItemCardProps) {
       </div>
       <div className="mt-4">
         <h2 className="text-lg font-bold">{item.name}</h2>
-        <p className="text-sm text-gray-400">{removeHtmlTags(item.plaintext)}</p>
+        <p className="text-sm text-gray-400">
+          {removeHtmlTags(item.plaintext)}
+        </p>
       </div>
     </div>
   );

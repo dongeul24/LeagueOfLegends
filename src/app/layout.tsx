@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/providers/RQProvider";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
+// 다크모드 제공을 위함...
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "리그 오브 레전드 백과사전",
@@ -38,11 +41,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="py-[82px] bg-[url('/images/background.webp')] bg-cover bg-no-repeat">
-        <Header />
-        <Providers>{children}</Providers>
-        <Footer />
-      </body>
+      <ThemeProvider attribute="class">
+        <body className="py-[82px] bg-[url('/images/background-lightmode.webp')] bg-cover bg-no-repeat dark:bg-[url('/images/background-darkmode.webp')]">
+          <Header />
+          <Providers>{children}</Providers>
+          <Footer />
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

@@ -15,7 +15,7 @@ export default async function ItemsPage() {
 
   return (
     <main className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-semibold text-center mb-10 text-yellow-500">
+      <h1 className="text-2xl font-semibold text-center mb-14">
         아이템 리스트
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">

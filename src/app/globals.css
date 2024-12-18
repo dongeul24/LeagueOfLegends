@@ -54,6 +54,7 @@
 
 /* 기본 body 폰트 설정 */
 body {
-  @apply bg-gray-100 text-gray-900;
+    @apply text-black dark:text-white; /* 기본 라이트 모드: 글자 검은색, 다크 모드: 글자 흰색 */
   font-family: "Spiegel", sans-serif;
 }
+

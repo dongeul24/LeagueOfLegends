@@ -15,8 +15,8 @@ const ChampionsPage = async () => {
   const champions: Champions = await fetchChampions(); //쳄피언들 정보 가져오기
 
   return (
-    <main className="container mx-auto px-10 py-8 bg-black">
-      <h1 className="text-2xl font-semibold text-center mb-10  text-yellow-500">
+    <main className="container mx-auto px-10 py-8 ">
+      <h1 className="text-2xl font-bold text-center mb-14">
         챔피언 리스트
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

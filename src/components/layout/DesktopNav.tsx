@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 
 const DesktopNav = () => {
   return (
@@ -51,6 +52,7 @@ const DesktopNav = () => {
         Champion Rotation
         <span className="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-yellow-500 transition-all duration-300 transform -translate-x-1/2 group-hover:w-full"></span>
       </Link>
+      <ThemeToggle></ThemeToggle>
     </nav>
   );
 };
