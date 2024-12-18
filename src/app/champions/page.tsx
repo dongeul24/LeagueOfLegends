@@ -1,4 +1,4 @@
-import { fetchChampions, getLatestVersion } from "@/utils/serverApi";
+import { fetchChampions } from "@/utils/serverApi";
 import ChampionCard from "@/components/ChampionCard";
 import { Champions, Champion } from "@/types/Champion";
 import { Metadata } from "next";
@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 
 const ChampionsPage = async () => {
   const champions: Champions = await fetchChampions(); //쳄피언들 정보 가져오기
-  const latestVersion: string = await getLatestVersion(); //최신 버전 가져오기기
 
   return (
     <main className="container mx-auto px-10 py-8 bg-black">
@@ -28,7 +27,7 @@ const ChampionsPage = async () => {
             id={id}
             name={champion.name}
             title={champion.title}
-            imageSrc={`https://ddragon.leagueoflegends.com/cdn/${latestVersion}/img/champion/${id}.png`}
+            imageSrc={`https://ddragon.leagueoflegends.com/cdn/${champion.version}/img/champion/${id}.png`}
           />
         ))}
       </div>

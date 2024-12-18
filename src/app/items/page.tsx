@@ -1,6 +1,12 @@
 import { fetchItemList, getLatestVersion } from "@/utils/serverApi";
 import ItemCard from "@/components/ItemCard";
 import { Items, Item } from "@/types/Item";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "리그 오브 레전드 아이템",
+  description: "League of Legends 아이템 정보 제공",
+};
 
 // 아이템 보여주는 페이지
 export default async function ItemsPage() {

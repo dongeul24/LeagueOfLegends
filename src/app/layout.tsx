@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import Providers from "@/components/providers/RQProvider";
+import Providers from "@/providers/RQProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -40,8 +40,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className="py-[82px] bg-[url('/images/background.webp')] bg-cover bg-no-repeat">
         <Header />
-        {/* <Providers>{children}</Providers> */}
-        {children}
+        <Providers>{children}</Providers>
         <Footer />
       </body>
     </html>
