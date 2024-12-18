@@ -21,7 +21,7 @@ const ChampionsPage = async () => {
         챔피언 리스트
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {/* 여기서 map으로 Chamion Card를 각각 만들어줌줌 */}
+        {/* 여기서 map으로 Chamion Card를 각각 만들어줌 */}
         {Object.entries(champions).map(([id, champion]: [string, Champion]) => (
           <ChampionCard
             key={id}

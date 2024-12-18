@@ -3,7 +3,12 @@ import { Item } from "@/types/Item";
 
 type ItemCardProps = {
   item: Item;
-  version: string
+  version: string;
+};
+
+// html 태그 제거하는 함수
+const removeHtmlTags = (input: string): string => {
+  return input.replace(/<[^>]*>/g, "").replace(/@[^@]*@/g, "");
 };
 
 export default function ItemCard({ item, version }: ItemCardProps) {
@@ -19,7 +24,7 @@ export default function ItemCard({ item, version }: ItemCardProps) {
       </div>
       <div className="mt-4">
         <h2 className="text-lg font-bold">{item.name}</h2>
-        <p className="text-sm text-gray-400">{item.plaintext}</p>
+        <p className="text-sm text-gray-400">{removeHtmlTags(item.plaintext)}</p>
       </div>
     </div>
   );
