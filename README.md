@@ -3,10 +3,12 @@
 
 웹사이트 바로가기: https://league-of-legends-app-delta.vercel.app/
 
+---------
+## 시뮬레이션
 
-![리그오브레전드 백과사전 - 데스크탑](https://github.com/user-attachments/assets/53a74f30-08e4-437f-ac66-bd9d06d6fdc0)
+데스크탑 화면: ![리그오브레전드 백과사전 - 데스크탑](https://github.com/user-attachments/assets/53a74f30-08e4-437f-ac66-bd9d06d6fdc0)
 
-![리그 오브 레전드 백과사전 - 모바일](https://github.com/user-attachments/assets/ad73e10a-e5bb-4cbf-91c4-b10b4cc5a9d9)
+모바일 화면: ![리그 오브 레전드 백과사전 - 모바일](https://github.com/user-attachments/assets/ad73e10a-e5bb-4cbf-91c4-b10b4cc5a9d9)
 
 
 ### 웹사이트 소개 전에 리그 오브 레전드(League of Legend)란?
