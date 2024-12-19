@@ -37,46 +37,41 @@
 
 ---
 
-## 프로젝트 구조
+📦 프로젝트 루트
+├── 🗂️ **app**                     # 페이지 및 라우팅 관련 폴더
+│   ├── 🗂️ **champions**          # 챔피언 관련 페이지
+│   │   ├── 📄 `page.tsx`         # 챔피언 목록 (ISR)
+│   │   ├── 🗂️ **[id]**          # 개별 챔피언 상세 페이지
+│   │   │   └── 📄 `page.tsx`     # 챔피언 상세 (동적 라우팅)
+│   ├── 🗂️ **rotation**           # 챔피언 로테이션 페이지
+│   │   ├── 📄 `page.tsx`         # 챔피언 로테이션 (CSR)
+│   │   ├── 📄 `global-error.tsx` # 에러 처리 페이지
+│   ├── 🗂️ **items**              # 아이템 관련 페이지
+│   │   └── 📄 `page.tsx`         # 아이템 목록 (SSG)
+├── 🗂️ **components**              # 재사용 가능한 컴포넌트
+│   ├── 🗂️ **cards**              # 카드 UI 컴포넌트
+│   │   ├── 📄 `ChampionCard.tsx`       # 챔피언 카드
+│   │   ├── 📄 `ChampionDetailCard.tsx` # 챔피언 상세 카드
+│   │   └── 📄 `ItemCard.tsx`           # 아이템 카드
+│   ├── 🗂️ **layout**             # 레이아웃 관련 컴포넌트
+│   │   ├── 📄 `Header.tsx`             # 헤더
+│   │   ├── 📄 `Footer.tsx`             # 푸터
+│   │   └── 📄 `ThemeToggle.tsx`        # 다크모드 토글
+│   ├── 🗂️ **status**             # 상태 표시 컴포넌트
+│       ├── 📄 `ErrorScreen.tsx`        # 에러 화면
+│       └── 📄 `LoadingSpinner.tsx`     # 로딩 스피너
+├── 🗂️ **types**                   # 타입 정의 파일
+│   ├── 📄 `Champion.ts`                # 챔피언 타입 정의
+│   ├── 📄 `ChampionRotation.ts`        # 로테이션 타입 정의
+│   ├── 📄 `Item.ts`                    # 아이템 타입 정의
+├── 🗂️ **utils**                   # 유틸리티 함수 모음
+│   ├── 📄 `riotApi.ts`                 # Riot API 유틸리티
+│   └── 📄 `serverApi.ts`               # 서버 호출 유틸리티
+├── 🗂️ **styles**                  # 스타일 파일
+│   └── 📄 `globals.css`               # 전역 스타일
+├── 📄 `.env`                       # 환경 변수 (API 키 등)
+└── 📄 `README.md`                  # 프로젝트 설명서
 
-```
-📂 프로젝트 루트
-├── 📁 app
-│   ├── 📁 champions
-│   │   ├── 📄 page.tsx        # 챔피언 목록 (ISR)
-│   │   ├── 📁 [id]
-│   │   │   └── 📄 page.tsx    # 챔피언 상세 (동적 라우팅)
-│   ├── 📁 rotation
-│   │   ├── 📄 page.tsx        # 챔피언 로테이션 (CSR)
-│   │   ├── 📄 global-error.tsx # 에러 처리 페이지
-│   ├── 📁 items
-│   │   └── 📄 page.tsx        # 아이템 목록 (SSG)
-├── 📁 components
-│   ├── 📁 cards
-│   │   ├── 📄 ChampionCard.tsx       # 챔피언 카드 컴포넌트
-│   │   ├── 📄 ChampionDetailCard.tsx # 챔피언 상세 카드
-│   │   └── 📄 ItemCard.tsx           # 아이템 카드
-│   ├── 📁 layout
-│   │   ├── 📄 Header.tsx             # 헤더
-│   │   ├── 📄 Footer.tsx             # 푸터
-│   │   └── 📄 ThemeToggle.tsx        # 다크모드 토글
-│   └── 📁 status
-│       ├── 📄 ErrorScreen.tsx        # 에러 화면
-│       └── 📄 LoadingSpinner.tsx     # 로딩 스피너
-├── 📁 types
-│   ├── 📄 Champion.ts                # 챔피언 타입
-│   ├── 📄 ChampionRotation.ts        # 로테이션 타입
-│   ├── 📄 Item.ts                    # 아이템 타입
-├── 📁 utils
-│   ├── 📄 riotApi.ts                 # Riot API 호출 유틸리티
-│   └── 📄 serverApi.ts               # 서버 관련 유틸리티
-├── 📁 styles
-│   └── 📄 globals.css                # 전역 스타일
-├── 📄 .env                           # 환경 변수 (API Key)
-└── 📄 README.md                      # 프로젝트 설명
-```
-
----
 
 ## 각 페이지 구현 및 렌더링 방식 설명
 
