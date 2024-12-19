@@ -5,12 +5,6 @@ import { getChampionRotation } from "@/utils/riotApi";
 import ChampionCard from "@/components/cards/ChampionCard";
 import { Champions, Champion } from "@/types/Champion";
 import LoadingSpinner from '@/components/status/LoadingSpinner';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: '금주 로테이션 챔피언',
-  description: '사용자들이 무료로 플레이할 수 있는 League of Legends 챔피언들을 소개하는 페이지. 챔피언들은 매주 바뀝니다.'
-};
 
 export default function RotationPage() {
   const {
